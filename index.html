@@ -17,96 +17,110 @@
     <div class="jumbotron container center-text">
         <h1 class="display-4">2020 Daily Planner 2020</h1>
         <p class="lead">Keeping your life organized!</p>
-    </div>
-    <div class="container" id="maincontent">
-       <div class="title">
-        <button class="prevDate" onclick="#">
-            <i class="fas fa-backward"></i>
-        </button>
-        <h2 class="date"></h2>
-        <button class="nextDate" onclick="#">
-            <i class="fas fa-forward"></i>
-        </button>
-       </div>
-       <div class="planner">
-           <div class="row hour-container">
-               <div class="col-2 label">
-                   <h3>9:00am</h3>
-                   <form id="9am_Data" class="col-10">
-                       <input type="text">
-                   </form>
-               </div>
+        <div id="clock"></div>
+        <hr class="my-4">
+        <div class="container" id="maincontent">
+           <div class="title">
+                <button class="prevDate" onclick="#">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="nextDate" onclick="#">
+                    <i class="fas fa-forward"></i>
+                </button>
+                <div id="getDate"> </div>
            </div>
-           <div class="row hour-container">
-               <div class="col-2 label">
-                    <h3>10:00am</h3>
+           <br>
+           <br>
+           <div class="planner">
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                       <div class="time">9 am</div>
+                    </div>
+                    <form id="9am_Data" class="col-10 events">
+                       <input type="text">
+                    </form>
+               </div>
+               <br>
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                        <div class="time">10 am</div>
+                    </div> 
                     <form id="10am_Data" class="col-10">
                         <input type="text">
                     </form>
-               </div> 
-           </div>
-           <div class="row hour-container">
-               <div class="col-2 label">
-                   <h3>11:00am</h3>
-                   <form id="11am_Data" class="col-10">
-                       <input type="text">
-                   </form>
                </div>
-           </div>
-           <div class="row hour-container">
-                <div class="col-2 label">
-                    <h312:00pm</li>
+               <br>
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                       <div class="time">11 am</div>
+                    </div>
+                    <form id="11am_Data" class="col-10">
+                           <input type="text">
+                    </form>
+               </div>
+               <br>
+               <div class="row hour-container">
+                    <div class="col-2 label">
+                        <div class="time">12 pm</div>
+                    </div>
                     <form id="12pm_Data" class="col-10">
                         <input type="text">
                     </form>
-                </div>
-           </div>
-           <div class="row hour-container">
-               <div class="col-2 label">
-                    <h3>1:00pm</h3>
+               </div>
+               <br>
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                        <div class="time">1 pm</div>
+                    </div>
                     <form id="1pm_Data" class="col-10">
                         <input type="text">
                     </form>
                </div>
-           </div>
-           <div class="row hour-container">
-               <div class="col-2 label">
-                   <h3>2:00pm</h3>
-                   <form id="2pm_data" class="col-10">
+               <br>
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                       <div class="time">2 pm</div>
+                    </div>   
+                    <form id="2pm_data" class="col-10">
                        <input type="text">
-                   </form>
-               </div>
-           </div>
-           <div class="row hour-container">
-               <div class="col-2 label">
-                   <h3>3:00pm</h3>
-                   <form id="3pm_Data" class="col-10">
-                       <input type="text">
-                   </form>
-               </div>
-           </div>
-           <div class="row hour-container">
-                <div class="col-2 label">
-                    <h3>4:00pm</h3>
-                    <form id="4pm_Data" class="col-10">
-                        <input type="text">
                     </form>
-                </div>
-           </div>
-           <div class="row hour-container">
-               <div class="col-2 label">
-                   <h3>5:00pm</h3>
-                   <form id="5pm_Data" class="col-10">
-                       <input type="text">
-                   </form>
                </div>
+               <br>
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                       <div class="time">3 pm</div>
+                    </div>
+                    <form id="3pm_Data" class="col-10 eventtext">
+                       <input type="text" id="text"/>
+                    </form>
+               </div>
+               <br>
+               <div class="row hour-container">
+                    <div class="col-2 label">
+                        <div class="time">4 pm</div>
+                    </div>
+                    <form id="4pm_Data" class="col-10">
+                        <input type="text"/>
+                    </form>
+               </div>
+               <br>
+               <div class="row hour-container">
+                   <div class="col-2 label">
+                       <div class="time">5 pm</div>
+                    </div>
+                    <form id="5pm_Data" class="col-10">
+                       <input type="text">
+                    </form>
+               </div>
+            </div>
+            <button type="button" class="btn btn-info" id="btnClear">Clear</button>
+            <button type="button" class="btn btn-info" id="btnSave">Save</button>
            </div>
         </div>
-        <button type="button" class="btn btn-primary" onclick="#">Save</button>
-        <button type="button" class="btn btn-warning" onclick="#">Clear</button>
-       </div>
-       
     </div>
-
+    <script src="/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./asset/js/moment.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./asset/js/script.js" type="text/javascript"></script>
 </body>
 </html>

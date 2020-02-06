@@ -1,0 +1,37 @@
+
+body {
+    background-color:#aad3c5;
+}
+/**title**/
+.center-text {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+.prevDate {
+    float: left;
+}
+
+.nextDate {
+    float: right;
+}
+
+#getDate { 
+    font-size: 20px
+}
+
+
+input[type] {
+    width: 100%;
+}
+
+/**Buttons**/
+.btn {
+    float: right;
+    background-color: #aad3c5;
+    margin: 5px;
+    border: #aad3c5;
+    color: #ffffff;
+}
