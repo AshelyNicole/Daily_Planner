@@ -30,10 +30,6 @@ $(document).ready(function(){
         $(".time").each(function(index,element){
             var eventTime = $(element).text()
             var eventDiscription= $(element).parent().siblings("form").children("input").val() 
-            // value = $(".inputText")
-            // eventDiscription = $("#9am_Data, #10am_Data, #11am_Data, #12pm_Data, #1pm_Data, #2pm_Data, #3pm_Data, #4pm_Data, #5pm_Data").value
-            // console.log(eventTime)
-            //console.log(eventTime)
             localStorage.setItem(eventTime, eventDiscription)
             
         })
